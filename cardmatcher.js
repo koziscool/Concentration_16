@@ -1,13 +1,5 @@
 
 
-matcherView = {
-	updateGameView: function(){},
-};
-
-matcherController = {
-	init: function(size) {},
-}
-
 $(document).ready( function() {
 	$('#grid-size').focus();
 	$("#grid-size-button").click( function(e){
