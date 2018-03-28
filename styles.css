@@ -51,3 +51,15 @@
 	backface-visibility: hidden;
 }
 
+.revealed{
+	transform: rotateY(0deg);
+}
+
+.revealed .name{
+	transform: translateY(60%) rotateY(0deg);
+}
+
+.correct{
+	color: lime;
+	border-color: darkgreen;
+}

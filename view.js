@@ -29,6 +29,12 @@ matcherView = {
 		}
 			
 	},
+
+	revealCard: function( id ) {
+		console.log('koz');
+		$("#card-" + id).addClass('revealed');
+	},
+		
 		
 
 	updateGameView: function(){},

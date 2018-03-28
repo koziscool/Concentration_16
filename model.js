@@ -6,6 +6,9 @@ matcherModel = {
 	cards: [],
 	cardValues: [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" ],
 	currentId: 1,
+
+	selectedCard: null,
+
 	totalCards: 0,
 
 	init: function( size ) {
@@ -46,6 +49,21 @@ matcherModel = {
 		return id;								
 	},
 								
+	sameCard: function( id ) {
+		return this.selectedCard && this.selectedCard.id === id;
+	},
+
+	getCard: function( id ) {
+		for( var i = 0; i < this.cards.length ; i++ ) {
+			if( this.cards[i].id === id ) return this.cards[i];
+		}
+		return null;			
+	},
+		
+	setSelectedCard: function( id ) {
+		this.selectedCard = this.getCard(id);
+	},
+		
 		
 };
 
