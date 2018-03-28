@@ -26,3 +26,28 @@
 	text-align: center;
 }
 
+.grid-container{
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card{
+	margin: 1%;
+	border: 1px solid black;
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: lightyellow;
+	height: 60px;
+	transition: all 0.5s;
+	transform: rotateY(180deg);
+}
+
+.name{
+	font-size: large;
+	text-align: center;
+	transition: all 0.5s;
+	transform: translateY(60%) rotateY(180deg);
+	backface-visibility: hidden;
+}
+
