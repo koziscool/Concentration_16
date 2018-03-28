@@ -1,0 +1,28 @@
+
+.game-info-container{
+	background-color: gray;
+	height: 80px;
+	margin: 0 0 10px 0;
+	display: block;
+}
+
+.section {
+	width: 25%;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	color: #DDD;
+	float: left;
+}
+
+.section div{
+	color: white;
+	display: inline;
+	font-weight: bold;
+}
+
+.form-container{
+	margin: 0 auto;
+	text-align: center;
+}
+
