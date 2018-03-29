@@ -10,6 +10,10 @@ matcherModel = {
 	selectedCard: null,
 
 	totalCards: 0,
+	numGuesses: 0,
+	matchedCards: 0,
+	gameStateText: "You haven't won yet, pick a pair.",
+
 
 	init: function( size ) {
 		this.size = size || this.size;
@@ -64,7 +68,23 @@ matcherModel = {
 		this.selectedCard = this.getCard(id);
 	},
 		
-		
+	checkGuess: function( id ) {
+		this.numGuesses++;
+		var secondCard= this.getCard(id);
+
+		var isCorrect = false;
+		if( secondCard ){
+			isCorrect = secondCard.value === this.selectedCard.value;
+		}
+
+		if (isCorrect) this.matchedCards += 2;
+		this.selectedCard = null;
+
+		if( this.matchedCards === this.totalCards )
+			this.gameStateText = "Congratulations, you win."
+	
+		return isCorrect;
+	},
 };
 
 
